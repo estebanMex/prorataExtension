@@ -1,0 +1,11 @@
+{
+  "name": "prorataextension",
+  "version": "1.0.0",
+  "description": "simple project with alpine JS + bulma css",
+  "main": "prorata.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

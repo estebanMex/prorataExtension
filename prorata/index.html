@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="/prorata.js"></script>
+    <script src="/alpine/dist/alpine.js" defer></script>
+</head>
+
+<body>
+    <div class="container" x-data="prorataCalculator()">
+        <section class="section">
+            <form action="#">
+                <p>
+                    <label>Depense en commun par mois
+                        <input type="number" min="0" name="expenses" @input.debounce.100="onInput($event)">
+                    </label>
+                </p>
+                <p>
+                    <label> name 1 <input type="text" name="partner1" @input.debounce.100="onInput($event)">
+                    </label>
+
+                    <label> salaire 1 <input type="number" min="0" name="income1" @input.debounce.100="onInput($event)">
+                    </label>
+                </p>
+
+                <p>
+                    <label> name 2 <input type="text" name="partner2" @input.debounce.100="onInput($event)">
+                    </label>
+
+                    <label> salaire 2 <input type="number" min="0" name="income2" @input.debounce.100="onInput($event)">
+                    </label>
+                </p>
+            </form>
+        </section>
+
+        <section class="summary" x-ref="summary">
+        </section>
+    </div>
+</body>
+
+</html>
